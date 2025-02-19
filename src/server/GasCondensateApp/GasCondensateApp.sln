@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasCondensateApp", "GasCondensateApp\GasCondensateApp.csproj", "{15C6E6B4-FBE3-48F3-A5F8-DDE1101C7FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{44767D22-6184-49AE-B65A-63712E38D3F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{27D88EA9-ACD1-4C84-A633-C0B2941E1ECD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{15C6E6B4-FBE3-48F3-A5F8-DDE1101C7FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15C6E6B4-FBE3-48F3-A5F8-DDE1101C7FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15C6E6B4-FBE3-48F3-A5F8-DDE1101C7FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44767D22-6184-49AE-B65A-63712E38D3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44767D22-6184-49AE-B65A-63712E38D3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44767D22-6184-49AE-B65A-63712E38D3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44767D22-6184-49AE-B65A-63712E38D3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D88EA9-ACD1-4C84-A633-C0B2941E1ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D88EA9-ACD1-4C84-A633-C0B2941E1ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D88EA9-ACD1-4C84-A633-C0B2941E1ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D88EA9-ACD1-4C84-A633-C0B2941E1ECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
