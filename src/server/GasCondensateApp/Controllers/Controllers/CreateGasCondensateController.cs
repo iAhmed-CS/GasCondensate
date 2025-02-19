@@ -1,11 +1,13 @@
 ﻿using Controllers.Persenters;
 using Domain.CreateGasCondensate;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Controllers.Controllers;
 
 [ApiController]
 [Route("create-gas-condensate")]
+[Authorize]
 public class CreateGasCondensateController : ControllerBase
 {
     private readonly IActionResultPresenter<CreateGasCondensateResponse> _presenter;
