@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { GasCondensate } from 'src/app/models/gas-condensate.model';
 import { GasCondensateService } from 'src/app/services/gas-condensate.service';
 
@@ -9,15 +9,15 @@ import { GasCondensateService } from 'src/app/services/gas-condensate.service';
   styleUrls: ['./create-gas-condensate.component.css']
 })
 export class CreateGasCondensateComponent {
-  addForm = new FormGroup({
-    id: new FormControl(""),
-    fieldName: new FormControl(""),
-    latitude: new FormControl(""),
-    longitude: new FormControl(""),
-    productionRate: new FormControl(""),
-    cost: new FormControl(""),
-    yearOfExtraction: new FormControl(""),
-    maintenanceType: new FormControl(""),
+  addForm = new UntypedFormGroup({
+    id: new UntypedFormControl(""),
+    fieldName: new UntypedFormControl(""),
+    latitude: new UntypedFormControl(""),
+    longitude: new UntypedFormControl(""),
+    productionRate: new UntypedFormControl(""),
+    cost: new UntypedFormControl(""),
+    yearOfExtraction: new UntypedFormControl(""),
+    maintenanceType: new UntypedFormControl(""),
   })
 
   constructor(private gasCondensateService: GasCondensateService) {  }

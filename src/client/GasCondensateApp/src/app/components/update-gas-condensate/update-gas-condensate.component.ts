@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { GasCondensate } from 'src/app/models/gas-condensate.model';
 import { GasCondensateService } from 'src/app/services/gas-condensate.service';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
@@ -10,15 +10,15 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
   styleUrls: ['./update-gas-condensate.component.css']
 })
 export class UpdateGasCondensateComponent {
-  updateForm = new FormGroup({
-    id: new FormControl(this.data.gasCondensate.id),
-    fieldName: new FormControl(this.data.gasCondensate.fieldName),
-    latitude: new FormControl(this.data.gasCondensate.latitude),
-    longitude: new FormControl(this.data.gasCondensate.longitude),
-    productionRate: new FormControl(this.data.gasCondensate.productionRate),
-    cost: new FormControl(this.data.gasCondensate.cost),
-    yearOfExtraction: new FormControl(this.data.gasCondensate.yearOfExtraction),
-    maintenanceType: new FormControl(this.data.gasCondensate.maintenanceType),
+  updateForm = new UntypedFormGroup({
+    id: new UntypedFormControl(this.data.gasCondensate.id),
+    fieldName: new UntypedFormControl(this.data.gasCondensate.fieldName),
+    latitude: new UntypedFormControl(this.data.gasCondensate.latitude),
+    longitude: new UntypedFormControl(this.data.gasCondensate.longitude),
+    productionRate: new UntypedFormControl(this.data.gasCondensate.productionRate),
+    cost: new UntypedFormControl(this.data.gasCondensate.cost),
+    yearOfExtraction: new UntypedFormControl(this.data.gasCondensate.yearOfExtraction),
+    maintenanceType: new UntypedFormControl(this.data.gasCondensate.maintenanceType),
   })
   
   constructor(private gasCondensateService: GasCondensateService,
