@@ -1,3 +1,3 @@
 ﻿namespace Domain.CreateGasCondensate;
 
-public record CreateGasCondensateResponse(Guid Id);
+public record CreateGasCondensateResponse(string Id);

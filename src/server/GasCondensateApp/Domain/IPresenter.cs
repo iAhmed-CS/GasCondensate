@@ -1,7 +1,7 @@
 ﻿namespace Domain;
 
-public interface IPresenter<in T>
+public interface IPresenter
 {
-    void Success(T response);
-    void Error(T error);
+    void Success<T>(T response);
+    void Error<T>(T error);
 }

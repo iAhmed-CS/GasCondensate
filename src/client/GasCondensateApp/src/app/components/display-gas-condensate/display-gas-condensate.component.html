@@ -1,0 +1,47 @@
+<table mat-table [dataSource]="gasCondensateList" class="mat-elevation-z8 demo-table">
+  <ng-container matColumnDef="fieldName">
+    <th mat-header-cell *matHeaderCellDef>Field Name</th>
+    <td mat-cell *matCellDef="let gasCondensate">{{gasCondensate.fieldName}}</td>
+  </ng-container>
+  <ng-container matColumnDef="latitude">
+    <th mat-header-cell *matHeaderCellDef>Latitude</th>
+    <td mat-cell *matCellDef="let gasCondensate">{{gasCondensate.latitude}}</td>
+  </ng-container>
+  <ng-container matColumnDef="longitude">
+    <th mat-header-cell *matHeaderCellDef>Longitude</th>
+    <td mat-cell *matCellDef="let gasCondensate">{{gasCondensate.longitude}}</td>
+  </ng-container>
+  <ng-container matColumnDef="productionRate">
+    <th mat-header-cell *matHeaderCellDef>Production Rate</th>
+    <td mat-cell *matCellDef="let gasCondensate">{{gasCondensate.productionRate}}</td>
+  </ng-container>
+  <ng-container matColumnDef="cost">
+    <th mat-header-cell *matHeaderCellDef>Cost</th>
+    <td mat-cell *matCellDef="let gasCondensate">{{gasCondensate.cost}}</td>
+  </ng-container>
+  <ng-container matColumnDef="yearOfExtraction">
+    <th mat-header-cell *matHeaderCellDef>Year Of Extraction</th>
+    <td mat-cell *matCellDef="let gasCondensate">{{gasCondensate.yearOfExtraction}}</td>
+  </ng-container>
+  <ng-container matColumnDef="maintenanceType">
+    <th mat-header-cell *matHeaderCellDef>Maintenance Type</th>
+    <td mat-cell *matCellDef="let gasCondensate">{{gasCondensate.maintenanceType}}</td>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+		<th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let gasCondensate">
+      <button mat-icon-button (click)="openEditDialog(gasCondensate)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteData(gasCondensate.id)">
+        <mat-icon color="warn">delete</mat-icon>
+      </button>
+    </td>
+	</ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<br />
+<button mat-fab color="primary" (click)="openAddDialog()">
+  <mat-icon>add</mat-icon>
+</button>

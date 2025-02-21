@@ -1,15 +1,28 @@
 ﻿
 namespace Domain.CreateGasCondensate;
 
-class CreateGasCondensateUseCase : ICreateGasCondensateUseCase
+public class CreateGasCondensateUseCase : ICreateGasCondensateUseCase
 {
-    public Task<bool> CanExecute(IPresenter<CreateGasCondensateResponse> presenter, CreateGasCondensateRequest request)
+    private readonly IGasCondensateGateway _gasCondensateGateway;
+
+    public CreateGasCondensateUseCase(IGasCondensateGateway gasCondensateGateway)
     {
-        throw new NotImplementedException();
+        _gasCondensateGateway = gasCondensateGateway;
     }
 
-    public Task Execute(IPresenter<CreateGasCondensateResponse> presenter, CreateGasCondensateRequest request)
+    public Task<bool> CanExecute(IPresenter presenter, CreateGasCondensateRequest request)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(true);
+    }
+
+    public Task Execute(IPresenter presenter, CreateGasCondensateRequest request)
+    {
+        var gasCondenstate = GasCondensate.Craete(request.Id, request.FieldName, request.Latitude, request.Longitude,
+            request.ProductionRate, request.Cost, request.YearOfExtraction, request.MaintenanceType);
+        _gasCondensateGateway.Add(gasCondenstate);
+
+        presenter.Success(new EmptyResponse());
+
+        return Task.CompletedTask;
     }
 }
