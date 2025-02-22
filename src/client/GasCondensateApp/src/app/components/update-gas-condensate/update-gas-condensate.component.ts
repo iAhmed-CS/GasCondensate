@@ -24,7 +24,7 @@ export class UpdateGasCondensateComponent {
   constructor(private gasCondensateService: GasCondensateService,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
-  onSubmit() {
+  updateData() {
     const updatedGasCondensate: GasCondensate = {
       id: this.updateForm.value.id,
       fieldName: this.updateForm.value.name,

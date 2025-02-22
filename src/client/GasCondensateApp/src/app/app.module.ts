@@ -14,9 +14,7 @@ import { CreateGasCondensateComponent } from './components/create-gas-condensate
 
 export const appRoutes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full' }, 
-  { path: '', component: DisplayGasCondensateComponent }, 
-  { path: 'add', component: CreateGasCondensateComponent },
-  { path: 'update/:id', component: UpdateGasCondensateComponent },  
+  { path: 'home', component: DisplayGasCondensateComponent }, 
 ]
 
 

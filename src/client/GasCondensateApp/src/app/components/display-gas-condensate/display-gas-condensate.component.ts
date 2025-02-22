@@ -15,6 +15,9 @@ export class DisplayGasCondensateComponent implements OnInit {
   gasCondensateList: GasCondensate[] = [];
   displayedColumns: string[] = ['fieldName', 'latitude', 'longitude', 'productionRate', 'cost', 'yearOfExtraction', 'maintenanceType', 'actions'];
 
+  latitude = 21.12346;
+  longitude = 55.123456;
+
   constructor(private gasCondensateService: GasCondensateService, private dialog: MatDialog) { }
 
   ngOnInit(): void {

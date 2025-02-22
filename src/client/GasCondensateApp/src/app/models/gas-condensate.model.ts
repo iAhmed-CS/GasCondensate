@@ -1,8 +1,8 @@
 export interface GasCondensate {
     id: string
     fieldName: string,
-    latitude: string,
-    longitude: string,
+    latitude: number,
+    longitude: number,
     productionRate: number,
     cost: number,
     yearOfExtraction: number,

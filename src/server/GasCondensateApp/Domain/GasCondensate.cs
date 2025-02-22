@@ -2,7 +2,7 @@
 
 public class GasCondensate
 {
-    public static GasCondensate Craete (string id, string fieldName, string latitude, string longitude, 
+    public static GasCondensate Craete (string id, string fieldName, decimal latitude, decimal longitude, 
         decimal productionRate, decimal cost, int yearOfExtraction, string maintenanceType)
     {
         return new GasCondensate
@@ -20,8 +20,8 @@ public class GasCondensate
 
     public string Id { get; set; } = string.Empty;
     public string FieldName { get; set; } = string.Empty;
-    public string Latitude { get; set; } = string.Empty;
-    public string Longitude { get; set; } = string.Empty;
+    public decimal Latitude { get; set; }
+    public decimal Longitude { get; set; }
     public decimal ProductionRate { get; set; }
     public decimal Cost { get; set; }
     public int YearOfExtraction { get; set; }

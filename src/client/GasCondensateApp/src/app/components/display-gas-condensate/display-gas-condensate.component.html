@@ -1,3 +1,9 @@
+<agm-map [latitude]="latitude" [longitude]="longitude">
+  <agm-marker *ngFor="let gasCondensate of gasCondensateList"
+    [latitude]="gasCondensate.latitude" [longitude]="gasCondensate.longitude">
+  </agm-marker>
+</agm-map>
+
 <table mat-table [dataSource]="gasCondensateList" class="mat-elevation-z8 demo-table">
   <ng-container matColumnDef="fieldName">
     <th mat-header-cell *matHeaderCellDef>Field Name</th>
